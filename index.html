@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="uz">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Tarjimon — yangi oʻzbek alifbosida tarjima</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&subset=latin-ext&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="wrap">
+    <header>
+      <h1>Tarjimon</h1>
+      <p class="sub">Istalgan tilda yozing — tilni oʻzimiz aniqlaymiz va maʼnosiga koʻra yangi oʻzbek alifbosida tarjima qilamiz.</p>
+    </header>
+
+    <div class="grid">
+      <section class="card">
+        <div class="card-head">
+          <label for="src">Matn</label>
+          <span id="detected" class="badge" aria-live="polite">Til avtomatik aniqlanadi</span>
+        </div>
+        <textarea id="src" dir="auto" maxlength="5000" placeholder="Bu yerga istalgan tilda yozing…" autofocus></textarea>
+        <div class="card-foot">
+          <span id="count" class="muted">0 / 5000</span>
+          <button id="go" class="btn primary" type="button">Tarjima qilish</button>
+        </div>
+      </section>
+
+      <section class="card out">
+        <div class="card-head">
+          <h2 id="out-label">Oʻzbekcha (yangi alifbo)</h2>
+          <button id="copy" class="btn" type="button" disabled>Nusxalash</button>
+        </div>
+        <output id="out" aria-labelledby="out-label" aria-live="polite"></output>
+        <p id="status" class="muted" role="status"></p>
+      </section>
+    </div>
+
+    <footer class="muted">Yangi alifbo: A B D E F G Ğ H I J K L M N O Ö P Q R S Ş Ç T U V X Y Z ʼ</footer>
+  </main>
+  <script src="converter.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
