@@ -34,4 +34,4 @@ footer { margin-top: 24px; text-align: center; letter-spacing: .04em; }
   .grid { grid-template-columns: 1fr; }
   .card { min-height: 0; }
 }
-.credit { text-align: center; margin-top: 8px; font-size: .9rem; }
+.credit { display: inline-block; margin-top: 8px; font-size: .9rem; }
